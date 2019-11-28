@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  TodayHeadline
 //
-//  Created by 李响 on 2019/11/22.
+//  Created by StevenWu on 2019/11/22.
 //  Copyright © 2019 StevenWu. All rights reserved.
 //
 

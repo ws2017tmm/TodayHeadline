@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,18 @@
 		64D5F4802387DA2F00204B7E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4792387DA2F00204B7E /* UIView+Extension.swift */; };
 		64D5F4832387DA4300204B7E /* DYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4822387DA4300204B7E /* DYConst.swift */; };
 		64D5F4AB238BA93100204B7E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4AA238BA93100204B7E /* Launch Screen.storyboard */; };
+		64D5F4B5238BE9DC00204B7E /* WSNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4B4238BE9DC00204B7E /* WSNetworkProvider.swift */; };
+		64D5F4B7238CC18900204B7E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4B6238CC18900204B7E /* API.swift */; };
+		64D5F4B9238CC71F00204B7E /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4B8238CC71F00204B7E /* HomeAPI.swift */; };
+		64D5F4BB238CC73400204B7E /* VolcanoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4BA238CC73400204B7E /* VolcanoAPI.swift */; };
+		64D5F4BD238CC75000204B7E /* VideoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4BC238CC75000204B7E /* VideoAPI.swift */; };
+		64D5F4BF238CC76000204B7E /* MineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4BE238CC76000204B7E /* MineAPI.swift */; };
+		64D5F4C1238CC77400204B7E /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C0238CC77400204B7E /* CommonAPI.swift */; };
+		64D5F4C4238E53BA00204B7E /* MineTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */; };
+		64D5F4C5238E53BA00204B7E /* MineTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */; };
+		64D5F4C8238E542700204B7E /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C6238E542700204B7E /* MainListCell.swift */; };
+		64D5F4C9238E542700204B7E /* MainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4C7238E542700204B7E /* MainListCell.xib */; };
+		64D5F4CB238E72CA00204B7E /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +55,18 @@
 		64D5F4792387DA2F00204B7E /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		64D5F4822387DA4300204B7E /* DYConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYConst.swift; sourceTree = "<group>"; };
 		64D5F4AA238BA93100204B7E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		64D5F4B4238BE9DC00204B7E /* WSNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSNetworkProvider.swift; sourceTree = "<group>"; };
+		64D5F4B6238CC18900204B7E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		64D5F4B8238CC71F00204B7E /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		64D5F4BA238CC73400204B7E /* VolcanoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoAPI.swift; sourceTree = "<group>"; };
+		64D5F4BC238CC75000204B7E /* VideoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPI.swift; sourceTree = "<group>"; };
+		64D5F4BE238CC76000204B7E /* MineAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineAPI.swift; sourceTree = "<group>"; };
+		64D5F4C0238CC77400204B7E /* CommonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
+		64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTitleCell.swift; sourceTree = "<group>"; };
+		64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTitleCell.xib; sourceTree = "<group>"; };
+		64D5F4C6238E542700204B7E /* MainListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
+		64D5F4C7238E542700204B7E /* MainListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainListCell.xib; sourceTree = "<group>"; };
+		64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
 		83EC866737B8B048CE717FF3 /* Pods_TodayHeadline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayHeadline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EB17B9ECD3A9355F48278B /* Pods-TodayHeadline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHeadline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline.debug.xcconfig"; sourceTree = "<group>"; };
 		BA8A789A8EC9B6991C7F5D4A /* Pods-TodayHeadline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHeadline.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +201,7 @@
 		648C83DE237E56FF00CC7620 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				64D5F4AE238BE5D700204B7E /* Network */,
 				648C83DF237E56FF00CC7620 /* Tools */,
 				648C83E0237E56FF00CC7620 /* Extensions */,
 				648C83E1237E56FF00CC7620 /* Const */,
@@ -239,6 +264,11 @@
 		648C83E5237E56FF00CC7620 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */,
+				64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */,
+				64D5F4C6238E542700204B7E /* MainListCell.swift */,
+				64D5F4C7238E542700204B7E /* MainListCell.xib */,
+				64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +337,60 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		64D5F4AE238BE5D700204B7E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				64D5F4B4238BE9DC00204B7E /* WSNetworkProvider.swift */,
+				64D5F4B6238CC18900204B7E /* API.swift */,
+				64D5F4B3238BE70800204B7E /* Common */,
+				64D5F4AF238BE6A000204B7E /* Home */,
+				64D5F4B0238BE6AA00204B7E /* Volcano */,
+				64D5F4B1238BE6CD00204B7E /* Video */,
+				64D5F4B2238BE6DC00204B7E /* Mine */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		64D5F4AF238BE6A000204B7E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64D5F4B8238CC71F00204B7E /* HomeAPI.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		64D5F4B0238BE6AA00204B7E /* Volcano */ = {
+			isa = PBXGroup;
+			children = (
+				64D5F4BA238CC73400204B7E /* VolcanoAPI.swift */,
+			);
+			path = Volcano;
+			sourceTree = "<group>";
+		};
+		64D5F4B1238BE6CD00204B7E /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				64D5F4BC238CC75000204B7E /* VideoAPI.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		64D5F4B2238BE6DC00204B7E /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				64D5F4BE238CC76000204B7E /* MineAPI.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		64D5F4B3238BE70800204B7E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				64D5F4C0238CC77400204B7E /* CommonAPI.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		6642482FBABEDE6444E7B110 /* Frameworks */ = {
@@ -388,6 +472,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D5F4AB238BA93100204B7E /* Launch Screen.storyboard in Resources */,
+				64D5F4C5238E53BA00204B7E /* MineTitleCell.xib in Resources */,
+				64D5F4C9238E542700204B7E /* MainListCell.xib in Resources */,
 				648C83EF237E56FF00CC7620 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,20 +509,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -447,17 +528,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D5F4802387DA2F00204B7E /* UIView+Extension.swift in Sources */,
+				64D5F4C1238CC77400204B7E /* CommonAPI.swift in Sources */,
 				64D5F47B2387DA2F00204B7E /* UIBarButtonItem+Extension.swift in Sources */,
 				646540172387CDC90094302B /* HomeViewController.swift in Sources */,
+				64D5F4C8238E542700204B7E /* MainListCell.swift in Sources */,
 				64D5F47F2387DA2F00204B7E /* UIColor+Extension.swift in Sources */,
+				64D5F4B7238CC18900204B7E /* API.swift in Sources */,
 				648C83F0237E56FF00CC7620 /* AppDelegate.swift in Sources */,
 				64D5F47C2387DA2F00204B7E /* UIImageView+Extension.swift in Sources */,
 				646540192387CE820094302B /* VideoViewController.swift in Sources */,
+				64D5F4BB238CC73400204B7E /* VolcanoAPI.swift in Sources */,
 				6465401D2387CEC20094302B /* MineViewController.swift in Sources */,
 				64D5F4832387DA4300204B7E /* DYConst.swift in Sources */,
+				64D5F4B5238BE9DC00204B7E /* WSNetworkProvider.swift in Sources */,
+				64D5F4BD238CC75000204B7E /* VideoAPI.swift in Sources */,
+				64D5F4CB238E72CA00204B7E /* MineHeaderView.swift in Sources */,
+				64D5F4B9238CC71F00204B7E /* HomeAPI.swift in Sources */,
 				646540152387CD930094302B /* NavigationController.swift in Sources */,
+				64D5F4C4238E53BA00204B7E /* MineTitleCell.swift in Sources */,
 				64D5F47D2387DA2F00204B7E /* UIImage+Extension.swift in Sources */,
 				646540132387CCDF0094302B /* TabBarController.swift in Sources */,
+				64D5F4BF238CC76000204B7E /* MineAPI.swift in Sources */,
 				6465401B2387CE9D0094302B /* VolcanoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

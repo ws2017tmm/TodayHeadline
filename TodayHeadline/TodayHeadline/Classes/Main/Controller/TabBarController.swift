@@ -2,7 +2,7 @@
 //  TabBarViewController.swift
 //  TodayHeadline
 //
-//  Created by 李响 on 2019/11/22.
+//  Created by StevenWu on 2019/11/22.
 //  Copyright © 2019 StevenWu. All rights reserved.
 //
 
@@ -23,7 +23,6 @@ class TabBarController: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(1111)
          let vc = UIStoryboard(name: "Launch Screen", bundle: nil).instantiateViewController(withIdentifier: "LaunchScreen")
         
         guard let launchView = vc.view else {
@@ -33,7 +32,7 @@ class TabBarController: UITabBarController {
         launchView.frame = UIScreen.main.bounds
         window?.addSubview(launchView)
         
-        UIView.animate(withDuration: 1.0, delay: 0.5, options: .beginFromCurrentState, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .beginFromCurrentState, animations: {
             launchView.alpha = 0
             launchView.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
         }) { (finished) in
@@ -59,13 +58,13 @@ extension TabBarController {
         let homeVC = addChildVC(vc: HomeViewController(), title: "首页", normal: "home_tabbar_night_32x32_", selected: "home_tabbar_press_32x32_")
         
         // 火山
-        let volcanoVC = addChildVC(vc: HomeViewController(), title: "火山", normal: "huoshan_tabbar_night_32x32_", selected: "huoshan_tabbar_press_32x32_")
+        let volcanoVC = addChildVC(vc: VolcanoViewController(), title: "火山", normal: "huoshan_tabbar_night_32x32_", selected: "huoshan_tabbar_press_32x32_")
         
         // 视频
-        let videoVC = addChildVC(vc: HomeViewController(), title: "视频", normal: "video_tabbar_night_32x32_", selected: "video_tabbar_press_32x32_")
+        let videoVC = addChildVC(vc: VideoViewController(), title: "视频", normal: "video_tabbar_night_32x32_", selected: "video_tabbar_press_32x32_")
         
         // 我的
-        let mineVC = addChildVC(vc: HomeViewController(), title: "我的", normal: "mine_tabbar_night_32x32_", selected: "mine_tabbar_press_32x32_")
+        let mineVC = addChildVC(vc: MineViewController(), title: "我的", normal: "mine_tabbar_night_32x32_", selected: "mine_tabbar_press_32x32_")
         
         viewControllers = [homeVC, volcanoVC, videoVC, mineVC];
     }

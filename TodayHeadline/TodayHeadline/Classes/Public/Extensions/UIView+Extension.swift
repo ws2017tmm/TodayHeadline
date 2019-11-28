@@ -119,3 +119,12 @@ extension UIView {
     
 }
 
+//MARK: 设置某个圆角
+extension UIView {
+    func setConcer(radius: CGFloat, byRoundingCorners corners: UIRectCorner=[.topLeft, .topRight, .bottomLeft, .bottomRight]) {
+        let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+    }
+}

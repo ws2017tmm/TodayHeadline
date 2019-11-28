@@ -6,7 +6,9 @@ target 'TodayHeadline' do
   use_frameworks!
   
   pod 'Kingfisher', '~> 5.7.1'
-
+  pod 'Moya'
+  pod 'SwiftyJSON', '~> 5.0.0'
+  pod 'ObjectMapper', '~> 3.4'
   # Pods for TodayHeadline
 
 end

@@ -1,16 +1,39 @@
 PODS:
+  - Alamofire (4.9.1)
   - Kingfisher (5.7.1)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - ObjectMapper (3.5.1)
+  - Result (4.1.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Kingfisher (~> 5.7.1)
+  - Moya
+  - ObjectMapper (~> 3.4)
+  - SwiftyJSON (~> 5.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Kingfisher
+  trunk:
+    - Alamofire
+    - Moya
+    - ObjectMapper
+    - Result
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 2aa6fecb9315ab91e8012639ebf73f0264d04340
+PODFILE CHECKSUM: 7429e8813f19bb8efe2780d45d77c242bc729a89
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

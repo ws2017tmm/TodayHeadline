@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TodayHeadline
 //
-//  Created by 李响 on 2019/11/15.
+//  Created by StevenWu on 2019/11/15.
 //  Copyright © 2019 StevenWu. All rights reserved.
 //
 
