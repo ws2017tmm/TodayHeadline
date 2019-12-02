@@ -2,7 +2,7 @@
 //  HomeAPI.swift
 //  TodayHeadline
 //
-//  Created by 李响 on 2019/11/26.
+//  Created by StevenWu on 2019/11/26.
 //  Copyright © 2019 StevenWu. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import Foundation
 import Moya
 
 enum HomeApi {
-    case tabs       //分类推荐列表
-    case liveCateList                //分类列表
-    case getRecList1                 // 热门推荐
+    case tabs               //分类推荐列表
+    case liveCateList       //分类列表
+    case getRecList1        // 热门推荐
 }
 
 extension HomeApi: API {

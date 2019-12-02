@@ -2,23 +2,64 @@
 //  MainListCell.swift
 //  TodayHeadline
 //
-//  Created by 李响 on 2019/11/27.
+//  Created by StevenWu on 2019/11/27.
 //  Copyright © 2019 StevenWu. All rights reserved.
 //
 
 import UIKit
 
-class MainListCell: UITableViewCell {
+protocol MainListCellDelegate : NSObjectProtocol {
+    func mineItemCell(_ itemCell: MineItemCell, didSelectedItem itemModel: MineListItemModel)
+}
 
+class MainListCell: UITableViewCell {
+    
+    weak var delegate: MainListCellDelegate?
+    var model: MineListCellModel? {
+        willSet {
+            if newValue != nil && model?.sectionTitle != newValue?.sectionTitle {
+                if self.contentView.subviews.count > 0 { self.contentView.subviews.forEach({
+                        $0.removeFromSuperview()
+                    })
+                }
+                guard let section = newValue?.section else {
+                    return
+                }
+                for model in section {
+                    let cellItem = MineItemCell.loadXib() as! MineItemCell
+                    cellItem.itemModel = model
+                    
+                    let tapGes = UITapGestureRecognizer(target: self, action: #selector(itemClicked))
+                    cellItem.addGestureRecognizer(tapGes)
+                    
+                    self.contentView.addSubview(cellItem)
+                }
+            }
+        }
+    }
+    
+    @objc func itemClicked(_ tapGes: UITapGestureRecognizer) {
+        let itemCell = tapGes.view as! MineItemCell
+        let itemModel = itemCell.itemModel!
+        delegate?.mineItemCell(itemCell, didSelectedItem: itemModel)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let width = self.contentView.width * 0.25;
+        let height = self.contentView.height
+        for i in 0..<self.contentView.subviews.count {
+            let view = self.contentView.subviews[i]
+            if view.isKind(of: MineItemCell.self) {
+                let x = CGFloat(i) * width
+                view.frame = CGRect(x: x, y: 0, width: width, height: height)
+            }
+        }
     }
     
 }

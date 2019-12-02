@@ -33,8 +33,10 @@
 		64D5F4C4238E53BA00204B7E /* MineTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */; };
 		64D5F4C5238E53BA00204B7E /* MineTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */; };
 		64D5F4C8238E542700204B7E /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C6238E542700204B7E /* MainListCell.swift */; };
-		64D5F4C9238E542700204B7E /* MainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4C7238E542700204B7E /* MainListCell.xib */; };
 		64D5F4CB238E72CA00204B7E /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */; };
+		64D5F4CD238FC14C00204B7E /* MineListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4CC238FC14C00204B7E /* MineListCellModel.swift */; };
+		64D5F4D32391223200204B7E /* MineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4D22391223200204B7E /* MineItemCell.swift */; };
+		64D5F4D52391224A00204B7E /* MineItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4D42391224A00204B7E /* MineItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +67,10 @@
 		64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTitleCell.swift; sourceTree = "<group>"; };
 		64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTitleCell.xib; sourceTree = "<group>"; };
 		64D5F4C6238E542700204B7E /* MainListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
-		64D5F4C7238E542700204B7E /* MainListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainListCell.xib; sourceTree = "<group>"; };
 		64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
+		64D5F4CC238FC14C00204B7E /* MineListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineListCellModel.swift; sourceTree = "<group>"; };
+		64D5F4D22391223200204B7E /* MineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineItemCell.swift; sourceTree = "<group>"; };
+		64D5F4D42391224A00204B7E /* MineItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineItemCell.xib; sourceTree = "<group>"; };
 		83EC866737B8B048CE717FF3 /* Pods_TodayHeadline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayHeadline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EB17B9ECD3A9355F48278B /* Pods-TodayHeadline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHeadline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline.debug.xcconfig"; sourceTree = "<group>"; };
 		BA8A789A8EC9B6991C7F5D4A /* Pods-TodayHeadline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHeadline.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHeadline/Pods-TodayHeadline.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 		648C83E4237E56FF00CC7620 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				64D5F4CC238FC14C00204B7E /* MineListCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,11 +269,12 @@
 		648C83E5237E56FF00CC7620 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */,
 				64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */,
 				64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */,
 				64D5F4C6238E542700204B7E /* MainListCell.swift */,
-				64D5F4C7238E542700204B7E /* MainListCell.xib */,
-				64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */,
+				64D5F4D22391223200204B7E /* MineItemCell.swift */,
+				64D5F4D42391224A00204B7E /* MineItemCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,7 +479,7 @@
 			files = (
 				64D5F4AB238BA93100204B7E /* Launch Screen.storyboard in Resources */,
 				64D5F4C5238E53BA00204B7E /* MineTitleCell.xib in Resources */,
-				64D5F4C9238E542700204B7E /* MainListCell.xib in Resources */,
+				64D5F4D52391224A00204B7E /* MineItemCell.xib in Resources */,
 				648C83EF237E56FF00CC7620 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +546,7 @@
 				64D5F4BB238CC73400204B7E /* VolcanoAPI.swift in Sources */,
 				6465401D2387CEC20094302B /* MineViewController.swift in Sources */,
 				64D5F4832387DA4300204B7E /* DYConst.swift in Sources */,
+				64D5F4CD238FC14C00204B7E /* MineListCellModel.swift in Sources */,
 				64D5F4B5238BE9DC00204B7E /* WSNetworkProvider.swift in Sources */,
 				64D5F4BD238CC75000204B7E /* VideoAPI.swift in Sources */,
 				64D5F4CB238E72CA00204B7E /* MineHeaderView.swift in Sources */,
@@ -550,6 +557,7 @@
 				646540132387CCDF0094302B /* TabBarController.swift in Sources */,
 				64D5F4BF238CC76000204B7E /* MineAPI.swift in Sources */,
 				6465401B2387CE9D0094302B /* VolcanoViewController.swift in Sources */,
+				64D5F4D32391223200204B7E /* MineItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

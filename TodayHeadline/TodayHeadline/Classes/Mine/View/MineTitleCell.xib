@@ -133,6 +133,7 @@
                 <outlet property="headerImageView" destination="s1i-us-I7s" id="XDI-cv-agD"/>
                 <outlet property="headlinesLabel" destination="jWp-C3-myX" id="aPb-ry-iWu"/>
                 <outlet property="nicknameLabel" destination="pWG-rG-gBK" id="Dv5-BB-Uxw"/>
+                <outlet property="subTitleView" destination="dx4-KQ-sm2" id="XyC-GU-Zo2"/>
             </connections>
             <point key="canvasLocation" x="335.50724637681162" y="159.04017857142856"/>
         </tableViewCell>
