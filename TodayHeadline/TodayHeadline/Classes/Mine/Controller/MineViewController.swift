@@ -221,29 +221,31 @@ extension MineViewController: MainListCellDelegate {
         case .readHistory:                  // 阅读历史
             print("readHistory")
         case .wallet:                       // 钱包
-                print("wallet")
+            print("wallet")
         case .feedback:                     // 用户反馈
-                print("feedback")
+            print("feedback")
         case .noTrafficService:             // 免流量服务
-                print("noTrafficService")
+            print("noTrafficService")
         case .systemSetting:                // 系统设置
-                print("privateLetter")
+            print("privateLetter")
         case .worksManagement:              // 作品管理
-                print("worksManagement")
+            print("worksManagement")
         case .superVip:                     // 超级会员
-                print("superVip")
+            print("superVip")
         case .dreamCharity:                 // 圆梦公益
-                print("dreamCharity")
+            print("dreamCharity")
         case .clearCache:                   // 清除缓存
-                print("clearCache")
+            print("clearCache")
+        case .nightMode:                    // 夜间模式
+            print("nightMode")
         case .comment:                      // 评论
-                print("comment")
+            print("comment")
         case .thumbsUp:                     // 点赞
-                print("thumbsUp")
+            print("thumbsUp")
         case .scan:                         // 扫一扫
-                print("scan")
+            print("scan")
         case .adPromotion:                  // 广告推广
-                print("adPromotion")
+            print("adPromotion")
         default:
             print("none")
         }

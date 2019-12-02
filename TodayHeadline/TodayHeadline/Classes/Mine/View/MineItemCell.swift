@@ -21,6 +21,7 @@ public enum MineItemCellType: Int {
     case superVip               // 超级会员
     case dreamCharity           // 圆梦公益
     case clearCache             // 清除缓存
+    case nightMode             // 夜间模式
     case comment                // 评论
     case thumbsUp               // 点赞
     case scan                   // 扫一扫
