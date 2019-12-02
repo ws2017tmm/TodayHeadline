@@ -1,5 +1,5 @@
 //
-//  MainListCell.swift
+//  MineListCell.swift
 //  TodayHeadline
 //
 //  Created by StevenWu on 2019/11/27.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol MainListCellDelegate : NSObjectProtocol {
+protocol MineListCellDelegate : NSObjectProtocol {
     func mineItemCell(_ itemCell: MineItemCell, didSelectedItem itemModel: MineListItemModel)
 }
 
-class MainListCell: UITableViewCell {
+class MineListCell: UITableViewCell {
     
-    weak var delegate: MainListCellDelegate?
+    weak var delegate: MineListCellDelegate?
     var model: MineListCellModel? {
         willSet {
             if newValue != nil && model?.sectionTitle != newValue?.sectionTitle {
@@ -44,8 +44,13 @@ class MainListCell: UITableViewCell {
         delegate?.mineItemCell(itemCell, didSelectedItem: itemModel)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {

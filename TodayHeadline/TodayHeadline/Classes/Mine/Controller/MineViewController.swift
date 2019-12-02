@@ -10,8 +10,8 @@ import UIKit
 import ObjectMapper
 
 let MineTitleCellID = "MineTitleCell"
-let MainListCellID = "MainListCell"
-let MainListAuthorCellID = "MineListAuthorCell"
+let MineListCellID = "MineListCell"
+let MineListAuthorCellID = "MineListAuthorCell"
 
 
 //MARK: - 生命周期
@@ -112,7 +112,7 @@ extension MineViewController {
         
         // 注册cell
         tableView.register(UINib(nibName: MineTitleCellID, bundle: nil), forCellReuseIdentifier: MineTitleCellID)
-        tableView.register(MainListCell.self, forCellReuseIdentifier: MainListCellID)
+        tableView.register(MineListCell.self, forCellReuseIdentifier: MineListCellID)
         
     }
 }
@@ -141,7 +141,7 @@ extension MineViewController {
             return cell
         } else {
             let model = mineDataList[indexPath.section-1]
-            let cell = tableView.dequeueReusableCell(withIdentifier: MainListCellID, for: indexPath) as! MainListCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MineListCellID, for: indexPath) as! MineListCell
             cell.model = model
             cell.delegate = self
             return cell
@@ -208,7 +208,7 @@ extension MineViewController {
 }
 
 //MARK: - itemCell点击的代理
-extension MineViewController: MainListCellDelegate {
+extension MineViewController: MineListCellDelegate {
     func mineItemCell(_ itemCell: MineItemCell, didSelectedItem itemModel: MineListItemModel) {
         
         switch itemCell.type {

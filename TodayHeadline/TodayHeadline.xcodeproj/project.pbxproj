@@ -32,7 +32,7 @@
 		64D5F4C1238CC77400204B7E /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C0238CC77400204B7E /* CommonAPI.swift */; };
 		64D5F4C4238E53BA00204B7E /* MineTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */; };
 		64D5F4C5238E53BA00204B7E /* MineTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */; };
-		64D5F4C8238E542700204B7E /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C6238E542700204B7E /* MainListCell.swift */; };
+		64D5F4C8238E542700204B7E /* MineListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4C6238E542700204B7E /* MineListCell.swift */; };
 		64D5F4CB238E72CA00204B7E /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */; };
 		64D5F4CD238FC14C00204B7E /* MineListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4CC238FC14C00204B7E /* MineListCellModel.swift */; };
 		64D5F4D32391223200204B7E /* MineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5F4D22391223200204B7E /* MineItemCell.swift */; };
@@ -66,7 +66,7 @@
 		64D5F4C0238CC77400204B7E /* CommonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
 		64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTitleCell.swift; sourceTree = "<group>"; };
 		64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTitleCell.xib; sourceTree = "<group>"; };
-		64D5F4C6238E542700204B7E /* MainListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
+		64D5F4C6238E542700204B7E /* MineListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineListCell.swift; sourceTree = "<group>"; };
 		64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
 		64D5F4CC238FC14C00204B7E /* MineListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineListCellModel.swift; sourceTree = "<group>"; };
 		64D5F4D22391223200204B7E /* MineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineItemCell.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 				64D5F4CA238E72CA00204B7E /* MineHeaderView.swift */,
 				64D5F4C2238E53BA00204B7E /* MineTitleCell.swift */,
 				64D5F4C3238E53BA00204B7E /* MineTitleCell.xib */,
-				64D5F4C6238E542700204B7E /* MainListCell.swift */,
+				64D5F4C6238E542700204B7E /* MineListCell.swift */,
 				64D5F4D22391223200204B7E /* MineItemCell.swift */,
 				64D5F4D42391224A00204B7E /* MineItemCell.xib */,
 			);
@@ -537,7 +537,7 @@
 				64D5F4C1238CC77400204B7E /* CommonAPI.swift in Sources */,
 				64D5F47B2387DA2F00204B7E /* UIBarButtonItem+Extension.swift in Sources */,
 				646540172387CDC90094302B /* HomeViewController.swift in Sources */,
-				64D5F4C8238E542700204B7E /* MainListCell.swift in Sources */,
+				64D5F4C8238E542700204B7E /* MineListCell.swift in Sources */,
 				64D5F47F2387DA2F00204B7E /* UIColor+Extension.swift in Sources */,
 				64D5F4B7238CC18900204B7E /* API.swift in Sources */,
 				648C83F0237E56FF00CC7620 /* AppDelegate.swift in Sources */,
