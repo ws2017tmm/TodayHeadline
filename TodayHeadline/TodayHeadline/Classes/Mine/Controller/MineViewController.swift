@@ -15,7 +15,7 @@ let MineListAuthorCellID = "MineListAuthorCell"
 
 
 //MARK: - 生命周期
-class MineViewController: UITableViewController {
+class MineViewController: BaseViewController {
     
     let titleList = ["data": [
             [
@@ -63,6 +63,23 @@ class MineViewController: UITableViewController {
         ]
     ]
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: UIScreen.main.bounds)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = UIColor(rgb: 245)
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 10))
+        
+        // 注册cell
+        tableView.register(UINib(nibName: MineTitleCellID, bundle: nil), forCellReuseIdentifier: MineTitleCellID)
+        tableView.register(MineListCell.self, forCellReuseIdentifier: MineListCellID)
+        
+        
+        return tableView
+    }()
+    
     var mineDataList: [MineListCellModel] = []
 
     override func viewDidLoad() {
@@ -91,6 +108,11 @@ class MineViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.contentInset = UIEdgeInsets(top: -500, left: 0, bottom: -10, right: 0)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
@@ -98,7 +120,6 @@ class MineViewController: UITableViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.contentInset = UIEdgeInsets(top: -300, left: 0, bottom: 0, right: 0)
     }
     
 }
@@ -107,28 +128,22 @@ class MineViewController: UITableViewController {
 extension MineViewController {
     private func setupUI() {
         view.backgroundColor = UIColor(rgb: 245)
-        tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        
-        // 注册cell
-        tableView.register(UINib(nibName: MineTitleCellID, bundle: nil), forCellReuseIdentifier: MineTitleCellID)
-        tableView.register(MineListCell.self, forCellReuseIdentifier: MineListCellID)
-        
+        view.addSubview(tableView)
     }
 }
 
 //MARK: - UITableViewDataSource
-extension MineViewController {
+extension MineViewController: UITableViewDataSource {
     ///  一共多少组
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return mineDataList.count + 1
     }
     /// 每组多少个
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     /// 每个cell怎么显示
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: MineTitleCellID, for: indexPath) as! MineTitleCell
@@ -151,32 +166,32 @@ extension MineViewController {
 
 
 //MARK: - UITableViewDelegate
-extension MineViewController {
+extension MineViewController: UITableViewDelegate {
     // 每个cell的高度
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 400
+            return 600
         } else {
             return 100
         }
     }
     
     //
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 1 || section == 3 || section == 4 {
             return 60
         }
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let model = mineDataList[section-1]
         let headerView = MineHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.width, height: 60))
         headerView.title = model.sectionTitle ?? ""
         return headerView
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 1 || section == 4 {
             return 0.5
         } else if section == mineDataList.count {
@@ -185,7 +200,7 @@ extension MineViewController {
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         view.backgroundColor = UIColor(rgb: 245)
@@ -238,6 +253,7 @@ extension MineViewController: MineListCellDelegate {
             print("clearCache")
         case .nightMode:                    // 夜间模式
             print("nightMode")
+            nightMode()
         case .comment:                      // 评论
             print("comment")
         case .thumbsUp:                     // 点赞
@@ -250,5 +266,6 @@ extension MineViewController: MineListCellDelegate {
             print("none")
         }
     }
+    
 }
 
